@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | Hassan Khoshrou &amp; The Atlas Rug Gallery Legacy | Since 1986</title>
+<meta name="description" content="The story of Hassan Khoshrou, a first generation Persian immigrant who built Atlas Rug Gallery in Fort Worth in 1986. Forty years, three generations of customers, and three sons carrying on his legacy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .story-quote{
+    font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.5rem);
+    font-style:italic;font-weight:300;line-height:1.4;
+    color:var(--ink);max-width:800px;margin:0 auto;text-align:center;
+    position:relative;padding:2rem 1rem;
+  }
+  .story-quote::before,.story-quote::after{
+    font-family:var(--serif);color:var(--bronze);font-size:4rem;
+    line-height:0;position:absolute;opacity:.5;
+  }
+  .story-quote::before{content:"\201C";top:1.4rem;left:-.5rem}
+  .story-quote::after{content:"\201D";bottom:-.5rem;right:-.5rem}
+  .story-quote .attr{
+    display:block;font-size:.85rem;font-style:normal;
+    text-transform:uppercase;letter-spacing:.28em;color:var(--bronze-deep);
+    margin-top:1.5rem;font-family:var(--sans);font-weight:400;
+  }
+  .rug-tales{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
+  .tale{
+    background:var(--cream-50);border:1px solid var(--line);padding:2.25rem;
+    position:relative;transition:all .4s ease;
+  }
+  .tale:hover{background:var(--cream-100);transform:translateY(-3px)}
+  .tale .tale-num{
+    position:absolute;top:1.5rem;right:1.75rem;
+    font-family:var(--serif);font-style:italic;color:var(--bronze);
+    font-size:2rem;opacity:.6;line-height:1;
+  }
+  .tale h4{font-size:1.4rem;margin-bottom:.5rem;font-weight:500}
+  .tale .tale-kind{
+    font-family:var(--sans);font-size:.7rem;text-transform:uppercase;
+    letter-spacing:.25em;color:var(--bronze-deep);display:block;margin-bottom:.75rem;
+  }
+  .tale p{font-family:var(--serif);font-size:1.05rem;line-height:1.7;color:var(--ink-soft);font-weight:300}
+  @media (max-width:768px){.rug-tales{grid-template-columns:1fr}}
+
+  .sons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+  .son{
+    text-align:center;padding:2.5rem 1.5rem;background:var(--cream-50);
+    border:1px solid var(--line);
+  }
+  .son .seal{
+    width:70px;height:70px;border-radius:50%;margin:0 auto 1.25rem;
+    background:var(--persian);color:var(--cream-50);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-style:italic;font-size:1.5rem;font-weight:400;
+  }
+  .son h4{font-size:1.5rem;font-weight:500;margin-bottom:.35rem}
+  .son .role{
+    font-family:var(--sans);font-size:.7rem;text-transform:uppercase;
+    letter-spacing:.28em;color:var(--bronze-deep);margin-bottom:1rem;display:block;
+  }
+  .son p{font-family:var(--serif);font-size:1.05rem;line-height:1.6;color:var(--ink-soft);font-weight:300}
+  @media (max-width:768px){.sons-grid{grid-template-columns:1fr}}
+
+  /* portrait gallery */
+  .portrait-gallery{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem;margin-top:3.5rem;
+  }
+  .portrait{
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    transition:transform .5s ease;
+  }
+  .portrait:hover{transform:translateY(-6px)}
+  .portrait-frame{
+    width:100%;aspect-ratio:3/4;
+    padding:14px;background:var(--cream-100);
+    border:1px solid var(--bronze);
+    box-shadow:
+      0 1px 0 rgba(168,134,88,.3) inset,
+      0 20px 40px rgba(43,36,28,.12),
+      0 4px 12px rgba(43,36,28,.08);
+    position:relative;
+  }
+  .portrait-frame::before{
+    content:"";position:absolute;inset:8px;
+    border:1px solid rgba(168,134,88,.4);pointer-events:none;
+  }
+  .portrait-frame::after{
+    content:"";position:absolute;inset:14px;
+    background:linear-gradient(135deg, rgba(251,247,239,.15) 0%, transparent 40%, transparent 60%, rgba(43,36,28,.08) 100%);
+    pointer-events:none;mix-blend-mode:overlay;
+  }
+  .portrait-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(5%) contrast(1.02)}
+  .portrait-caption{
+    margin-top:1.25rem;
+    font-family:var(--sans);font-size:.72rem;text-transform:uppercase;
+    letter-spacing:.28em;color:var(--bronze-deep);font-weight:400;
+  }
+  .portrait-sub{
+    margin-top:.35rem;
+    font-family:var(--serif);font-style:italic;font-size:.95rem;
+    color:var(--ink-soft);font-weight:300;
+  }
+  @media (max-width:960px){.portrait-gallery{grid-template-columns:repeat(2,1fr);gap:2rem}}
+  @media (max-width:480px){.portrait-gallery{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="brand-wrap"><img src="assets/images/logo.png" alt="Atlas Rug Gallery" class="brand-logo"></a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="current">Story</a></li>
+    <li><a href="rugs.html">Rugs</a></li>
+    <li><a href="cleaning.html">Cleaning</a></li>
+    <li><a href="at-home.html">Try at Home</a></li>
+    <li><a href="trade.html">Trade</a></li>
+    <li><a href="heritage.html">Heritage</a></li>
+    <li><a href="auctions.html">Auctions</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero with-image">
+  <div class="hero-text reveal">
+    <span class="eyebrow">The Story of Hassan Khoshrou <span class="rule"></span> Since 1986</span>
+    <h1>A Persian story, <span class="line-script ital">told in wool.</span></h1>
+    <p class="lede">
+      Atlas Rug Gallery began with one man who could not stop loving the rugs of his
+      homeland. Forty years later, his three sons carry on what he built. This is the
+      story of Hassan Khoshrou, and of the beautiful pieces that brought him to
+      Fort Worth, Texas.
+    </p>
+    <div class="meta-strip mt-3">
+      <div>Founded<strong>1986</strong></div>
+      <div>Heritage<strong>Persian</strong></div>
+      <div>Family<strong>Three Generations</strong></div>
+    </div>
+  </div>
+  <div class="hero-img reveal">
+    <img src="assets/images/hand-repair.jpg" alt="A master artisan working on a Persian rug by hand, representing the generational craft that defines Atlas Rug Gallery">
+  </div>
+</header>
+
+<section>
+  <div class="container-narrow">
+    <div class="reveal">
+      <span class="eyebrow">The First Generation</span>
+      <h2 style="font-size:clamp(2.2rem,4.5vw,3.5rem);margin:1rem 0 2rem">Hassan came from a place <span class="ital">where rugs were not decoration.</span></h2>
+      <p style="font-family:var(--serif);font-size:1.3rem;line-height:1.85;color:var(--ink-soft);font-weight:300">
+        In Persia, a rug was not something you bought for a room. A rug was where
+        your grandfather prayed in the morning. It was where your cousins were
+        born. It was where the family gathered after dinner, poured tea, and told
+        stories late into the night. A rug was the floor of a life.
+      </p>
+      <p style="font-family:var(--serif);font-size:1.3rem;line-height:1.85;color:var(--ink-soft);font-weight:300;margin-top:1.25rem">
+        Hassan Khoshrou grew up in that world. He learned the names of weaves
+        before he learned arithmetic. He could tell a Kashan from an Isfahan by
+        the smell of the wool. When he left his homeland for America in [YEAR],
+        he did not leave that world behind. He packed it up and brought it with him.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream-100);padding:7rem var(--gutter);position:relative;overflow:hidden">
+  <div style="position:absolute;top:3rem;right:-60px;transform:rotate(12deg);font-family:var(--serif);font-size:clamp(10rem,18vw,22rem);font-weight:300;color:var(--cream-200);line-height:1;font-style:italic;pointer-events:none;z-index:0;letter-spacing:-.05em;opacity:.6">Hassan</div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="section-head reveal" style="margin-bottom:2rem">
+      <span class="eyebrow center">Leadership Through The Years</span>
+      <h2>Our <span class="ital">founder.</span></h2>
+      <p>Four decades of a man at work. Four photographs from a life built on craft, family, and the quiet pursuit of beauty.</p>
+    </div>
+    <div class="portrait-gallery reveal">
+      <figure class="portrait">
+        <div class="portrait-frame">
+          <img src="assets/images/hassan-early.jpg" alt="Young Hassan Khoshrou, early portrait from his years in Persia">
+        </div>
+        <figcaption class="portrait-caption">Early Years</figcaption>
+        <div class="portrait-sub">A young man in Persia</div>
+      </figure>
+      <figure class="portrait">
+        <div class="portrait-frame">
+          <img src="assets/images/hassan-commitment.jpg" alt="Hassan Khoshrou formal portrait during his early career">
+        </div>
+        <figcaption class="portrait-caption">The Commitment</figcaption>
+        <div class="portrait-sub">Before the gallery opened</div>
+      </figure>
+      <figure class="portrait">
+        <div class="portrait-frame">
+          <img src="assets/images/hassan-desk.jpg" alt="Hassan Khoshrou at his desk in the early years of the business">
+        </div>
+        <figcaption class="portrait-caption">Dedication To Craft</figcaption>
+        <div class="portrait-sub">The long work begins</div>
+      </figure>
+      <figure class="portrait">
+        <div class="portrait-frame">
+          <img src="assets/images/hassan-office.jpg" alt="Hassan Khoshrou in his gallery office, taking a call at his desk">
+        </div>
+        <figcaption class="portrait-caption">Building The Vision</figcaption>
+        <div class="portrait-sub">Atlas Rug Gallery, at work</div>
+      </figure>
+    </div>
+    <p style="font-family:var(--serif);font-size:1.05rem;color:var(--ink-soft);font-style:italic;text-align:center;margin-top:3.5rem;font-weight:300;max-width:680px;margin-left:auto;margin-right:auto" class="reveal">
+      The Iranian flag in the office. The books behind him. The flowers on the
+      desk. He brought his whole world into this room. And his whole world
+      walked in through that door.
+    </p>
+  </div>
+</section>
+
+<section style="background:var(--cream-100)">
+  <div class="container">
+    <div class="split">
+      <div class="split-img reveal">
+        <div class="frame bordered"><img src="assets/images/rug-weaving.jpg" alt="Traditional Persian rug weaving, representing the heritage Hassan brought with him"></div>
+      </div>
+      <div class="split-text reveal">
+        <span class="eyebrow">Fort Worth, 1986</span>
+        <h2>A small space <span class="ital">on Camp Bowie.</span></h2>
+        <p>
+          In 1986, Hassan opened the doors of Atlas Rug Gallery with a modest
+          inventory, a handshake guarantee, and a conviction that Fort Worth
+          would come to love these pieces the way his own family did. He was
+          right. Within a year, the gallery was a gathering place.
+        </p>
+        <p>
+          Customers came for rugs and stayed for the stories. Hassan poured tea,
+          walked them across the floor, and showed them what to look for. The
+          pattern that told you where a rug was born. The knot density that
+          told you how long a weaver had spent on it. The small imperfections
+          that proved human hands had made it. Few people left without learning
+          something.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:5rem var(--gutter)">
+  <div class="container-narrow reveal">
+    <p class="story-quote">
+      He never sold you a rug. He taught you how to see one.
+      <span class="attr">A Longtime Customer</span>
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container-narrow">
+    <div class="reveal">
+      <span class="eyebrow">The Great Teacher</span>
+      <h2 style="font-size:clamp(2.2rem,4.5vw,3.5rem);margin:1rem 0 2rem">He was a <span class="ital">teacher,</span> first.</h2>
+      <p style="font-family:var(--serif);font-size:1.25rem;line-height:1.85;color:var(--ink-soft);font-weight:300">
+        Hassan was a rug dealer on paper. What he actually did was teach. He
+        taught young couples how to pick a rug that would grow with them. He
+        taught designers how to read a weave like a signature. He taught
+        collectors how to tell a city piece from a village piece at thirty
+        paces. And quietly, he taught every one of his customers something
+        about themselves: take your time, trust your eye, and live with
+        beautiful things.
+      </p>
+      <p style="font-family:var(--serif);font-size:1.25rem;line-height:1.85;color:var(--ink-soft);font-weight:300;margin-top:1.25rem">
+        He believed beauty made you healthier. He believed hurry made you
+        smaller. He believed a good rug, a pot of tea, and an hour with a
+        friend was worth more than most of what the world called important.
+        He was probably right.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section" style="padding:7rem var(--gutter)">
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
+    <div class="reveal">
+      <span class="eyebrow">The Joy</span>
+      <h2 style="font-size:clamp(2.2rem,4.5vw,3.5rem);margin-top:1rem">The laughter was <span class="ital">as good as the rugs.</span></h2>
+      <p style="font-family:var(--serif);font-size:1.25rem;line-height:1.8;margin-top:1.5rem;font-weight:300">
+        Anyone who walked into Atlas Rug Gallery in any decade since 1986 will
+        tell you the same thing. Hassan made you laugh. Not a salesman's laugh.
+        A real one. He had a story for every rug, a joke for every occasion,
+        and a way of making complete strangers feel like old friends.
+      </p>
+      <p style="font-family:var(--serif);font-size:1.25rem;line-height:1.8;margin-top:1.25rem;font-weight:300">
+        Many of those strangers became exactly that. Three generations of
+        Fort Worth families now count their visits to Hassan as part of
+        their own family memory. Children who played on the gallery floor
+        in the 80s come in now with children of their own, looking for
+        a piece to pass down.
+      </p>
+    </div>
+    <div class="reveal">
+      <div class="frame"><img src="assets/images/hero-ladies-tea.jpg" alt="Customers gathered for tea and stories at Atlas Rug Gallery" style="aspect-ratio:4/5"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow center">Every Rug a Tale</span>
+      <h2>These are not floor coverings. <span class="ital">They are stories.</span></h2>
+      <p>Ask any of the sons. They know the ones Hassan loved most.</p>
+    </div>
+    <div class="rug-tales reveal">
+      <div class="tale">
+        <span class="tale-num">01</span>
+        <span class="tale-kind">The Isfahan</span>
+        <h4>Never for sale.</h4>
+        <p>
+          A fine Isfahan piece has hung on the back wall of the gallery since
+          the first week. Every dealer has one like it. The rug you would sooner
+          close the store than part with. Hassan bought it before he opened the
+          doors and never changed his mind.
+        </p>
+      </div>
+      <div class="tale">
+        <span class="tale-num">02</span>
+        <span class="tale-kind">The Kashan</span>
+        <h4>Cleaned on the house.</h4>
+        <p>
+          A grieving widow once brought in a large Kashan her husband had loved.
+          She asked how much to clean it. Hassan said, next time, bring pastries.
+          She still brings rugs in every year. She still brings pastries.
+        </p>
+      </div>
+      <div class="tale">
+        <span class="tale-num">03</span>
+        <span class="tale-kind">The Heriz</span>
+        <h4>Three generations deep.</h4>
+        <p>
+          A young couple bought a tribal Heriz in 1989 for their first home.
+          Thirty years later, their daughter walked into the gallery looking
+          for one of her own. She did not know her parents had done the same
+          thing in the same room.
+        </p>
+      </div>
+      <div class="tale">
+        <span class="tale-num">04</span>
+        <span class="tale-kind">The Prayer Rug</span>
+        <h4>Beside the desk.</h4>
+        <p>
+          A small old piece from Qum has always sat beside Hassan's desk. He
+          will not sell it. He says it keeps him honest. When you visit, ask
+          about it. The sons will tell you the story.
+        </p>
+      </div>
+    </div>
+    <p style="font-family:var(--serif);font-size:1.1rem;color:var(--ink-soft);font-style:italic;text-align:center;margin-top:3rem;font-weight:300" class="reveal">
+      The gallery holds a thousand more like these. Come hear them in person.
+    </p>
+  </div>
+</section>
+
+<section style="background:var(--cream-100)">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow center">The Next Chapter</span>
+      <h2>Three sons. <span class="ital">One legacy.</span></h2>
+      <p>Hassan's sons grew up in the gallery. They learned to read a rug before they could read a book.</p>
+    </div>
+    <div class="sons-grid reveal">
+      <div class="son">
+        <div class="seal">K</div>
+        <h4>[SON NAME]</h4>
+        <span class="role">[Role]</span>
+        <p>[A sentence about what he brings to the gallery. Maybe an area of expertise, a quality his father taught him, or a role he plays.]</p>
+      </div>
+      <div class="son">
+        <div class="seal">K</div>
+        <h4>[SON NAME]</h4>
+        <span class="role">[Role]</span>
+        <p>[A sentence about this son. His focus, his strength, the thread of Hassan that runs strongest through him.]</p>
+      </div>
+      <div class="son">
+        <div class="seal">K</div>
+        <h4>[SON NAME]</h4>
+        <span class="role">[Role]</span>
+        <p>[A sentence about this son. What he handles, what he cares about, how he carries the family name forward.]</p>
+      </div>
+    </div>
+    <p style="font-family:var(--serif);font-size:1.25rem;line-height:1.8;color:var(--ink-soft);font-weight:300;max-width:760px;margin:3.5rem auto 0;text-align:center" class="reveal">
+      Together, the brothers run Atlas Rug Gallery the way their father taught
+      them: honestly, patiently, and with the same quiet joy that made Hassan
+      beloved. The name over the door has not changed. Neither have the values
+      behind it.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container-narrow">
+    <div class="section-head reveal">
+      <span class="eyebrow center">What He Taught Us</span>
+      <h2>Four lessons, <span class="ital">forty years in.</span></h2>
+    </div>
+    <ol class="service-list reveal">
+      <li>
+        <span class="num">01</span>
+        <div>
+          <h4>A rug is a relationship.</h4>
+          <p>Hassan never understood transactional selling. Every rug on the floor had a family it belonged to, and his job was to find that family. The sons still sell this way. It takes longer. It is worth it.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">02</span>
+        <div>
+          <h4>Beauty is not a luxury.</h4>
+          <p>He believed beautiful things made you live better, sleep deeper, love harder, and feel more alive. A good rug was not a splurge. It was a small daily medicine. Four decades of customers will tell you he was right.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <div>
+          <h4>Take your time.</h4>
+          <p>Hassan never pushed a sale. Sit with the rug. Sleep on it. Come back next week. A rug picked quickly is a rug regretted slowly. A rug picked well is a rug loved forever.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">04</span>
+        <div>
+          <h4>Laugh more than you sell.</h4>
+          <p>Rugs are serious. People do not have to be. The joy of walking into this gallery has always been half the reason people came back. We are still committed to that part. Come laugh with us.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section style="background:var(--cream-100);padding:6rem var(--gutter)">
+  <div class="container-narrow center reveal">
+    <span class="eyebrow center">A Personal Note</span>
+    <h2 style="font-size:clamp(2rem,4vw,3rem);margin-top:1rem">Thank you, <span class="ital">Dad.</span></h2>
+    <p style="font-family:var(--serif);font-size:1.25rem;color:var(--ink-soft);font-weight:300;margin-top:2rem;line-height:1.85;font-style:italic">
+      To our father: every rug on this floor, every story we tell a customer,
+      every laugh we share in the gallery, it started with you. We are still
+      here because you built it well. Thank you for the craft. Thank you for
+      the lessons. Thank you for the joy that fills this room long after you
+      have gone home for the night.
+    </p>
+    <p style="font-family:var(--serif);font-size:1.2rem;color:var(--ink-soft);font-weight:300;margin-top:2rem;line-height:1.85">
+      To our customers: come in. Sit. Have tea. We will tell you a story.
+    </p>
+    <p style="font-family:var(--serif);font-size:1.15rem;color:var(--bronze-deep);font-weight:400;margin-top:2.5rem;font-style:italic">
+      The Khoshrou Brothers
+    </p>
+  </div>
+</section>
+
+<section class="dark-section" style="padding:6rem var(--gutter)">
+  <div class="container center reveal">
+    <span class="eyebrow">Come Meet The Family</span>
+    <h2 style="font-size:clamp(2rem,4vw,3rem);margin-top:1rem">4915 Camp Bowie Blvd.</h2>
+    <p style="font-family:var(--serif);font-size:1.2rem;line-height:1.7;max-width:620px;margin:1.5rem auto 0;font-weight:300">
+      Open six days a week. Come meet the sons. Hear a story. Find a rug that
+      speaks to you. The tea is already on.
+    </p>
+    <div class="cta-row" style="justify-content:center;margin-top:2.5rem">
+      <a href="contact.html" class="btn light">Plan a Visit</a>
+      <a href="tel:8173778598" class="btn" style="background:transparent;border-color:var(--sand);color:var(--sand)">Call 817-377-8598</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand"><img src="assets/images/logo.png" alt="Atlas Rug Gallery"></div>
+      <p class="foot-about">Atlas Rug Gallery. Family run since 1986. We buy, sell, and trade hand knotted antique rugs. Hand cleaned on site, delivered across the country and into homes across Texas.</p>
+    </div>
+    <div class="foot-col"><h4>Gallery</h4><ul>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="rugs.html">Our Rugs</a></li>
+      <li><a href="auctions.html">Auctions</a></li>
+      <li><a href="heritage.html">Heritage</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>Services</h4><ul>
+      <li><a href="cleaning.html">Hand Cleaning</a></li>
+      <li><a href="cleaning.html">Pet Stain Removal</a></li>
+      <li><a href="at-home.html">Try at Home</a></li>
+      <li><a href="trade.html">Trade Program</a></li>
+    </ul></div>
+    <div class="foot-col"><h4>Visit</h4><ul>
+      <li>4915 Camp Bowie Blvd</li>
+      <li>Fort Worth, Texas 76107</li>
+      <li>817-377-8598</li>
+      <li>[EMAIL]</li>
+    </ul></div>
+  </div>
+  <div class="foot-bottom">
+    <div>&copy; <span id="yr"></span> Atlas Rug Gallery. Family run since 1986.</div>
+    <div>Fort Worth, Texas &nbsp;&bull;&nbsp; Shipping Nationwide</div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
